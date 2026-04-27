@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameElement = document.getElementById('typed-name');
     if (nameElement) {
         setTimeout(() => {
-            typeWriter(nameElement, 'Your Name', 100);
+            typeWriter(nameElement, 'xue hao', 100);
         }, 500);
     }
 
