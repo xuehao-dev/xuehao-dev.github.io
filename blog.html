@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | 技术博客</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-btn close"></div>
+            <div class="terminal-btn minimize"></div>
+            <div class="terminal-btn maximize"></div>
+            <span class="terminal-title">root@portfolio:~/blog</span>
+        </div>
+        <div class="terminal-body">
+            <!-- 导航栏 -->
+            <nav class="nav">
+                <span class="prompt">root@portfolio:~$</span>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">home</a>
+                    <a href="blog.html" class="nav-link active">blog</a>
+                    <a href="skills.html" class="nav-link">skills</a>
+                </div>
+            </nav>
+
+            <!-- 博客主体 -->
+            <section class="hero blog-header">
+                <div class="terminal-block">
+                    <div class="command-line">
+                        <span class="prompt">></span>
+                        <span class="command">ls -la ./articles/</span>
+                    </div>
+                    <div class="output">
+                        <div class="output-content">
+                            <h1>技术博客</h1>
+                            <p style="color: var(--text-dim); margin-top: 8px;">记录技术成长，分享实战经验</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 筛选栏 -->
+                <div class="filter-bar" id="filter-bar">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="Java">Java</button>
+                    <button class="filter-btn" data-filter="Spring Boot">Spring Boot</button>
+                    <button class="filter-btn" data-filter="MySQL">MySQL</button>
+                    <button class="filter-btn" data-filter="Redis">Redis</button>
+                    <button class="filter-btn" data-filter="Docker">Docker</button>
+                    <button class="filter-btn" data-filter="架构设计">架构设计</button>
+                </div>
+
+                <!-- 文章列表 -->
+                <div class="article-list" id="article-list">
+                    <div class="article-item" data-tags="Spring Boot,Java">
+                        <a href="article.html?id=1" class="article-title">Spring Boot 实战：如何设计优雅的参数校验</a>
+                        <div class="article-meta">2026-04-20 | 阅读 126 | 分类: Spring Boot</div>
+                        <p style="color: var(--text-dim); font-size: 14px; margin: 8px 0;">本文介绍了如何在Spring Boot中实现优雅的参数校验，包括基础注解、自定义校验器以及全局异常处理。</p>
+                        <div class="article-tags">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Validation</span>
+                        </div>
+                    </div>
+
+                    <div class="article-item" data-tags="MySQL,Performance">
+                        <a href="article.html?id=2" class="article-title">MySQL索引优化：从原理到实践</a>
+                        <div class="article-meta">2026-04-15 | 阅读 89 | 分类: MySQL</div>
+                        <p style="color: var(--text-dim); font-size: 14px; margin: 8px 0;">深入理解MySQL索引底层结构（B+树），分析慢查询原因，并给出实战优化案例。</p>
+                        <div class="article-tags">
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Performance</span>
+                            <span class="tag">Index</span>
+                        </div>
+                    </div>
+
+                    <div class="article-item" data-tags="Docker,DevOps">
+                        <a href="article.html?id=3" class="article-title">Docker Compose 编排技巧：构建开发环境</a>
+                        <div class="article-meta">2026-04-10 | 阅读 67 | 分类: Docker</div>
+                        <p style="color: var(--text-dim); font-size: 14px; margin: 8px 0;">使用Docker Compose快速搭建本地开发环境，包括MySQL、Redis、Nginx等服务的编排。</p>
+                        <div class="article-tags">
+                            <span class="tag">Docker</span>
+                            <span class="tag">DevOps</span>
+                        </div>
+                    </div>
+
+                    <div class="article-item" data-tags="Redis,Performance">
+                        <a href="article.html?id=4" class="article-title">Redis 缓存避坑指南：常见问题与解决方案</a>
+                        <div class="article-meta">2026-04-05 | 阅读 103 | 分类: Redis</div>
+                        <p style="color: var(--text-dim); font-size: 14px; margin: 8px 0;">总结Redis使用中的常见问题：缓存穿透、缓存雪崩、缓存击穿以及对应的解决方案。</p>
+                        <div class="article-tags">
+                            <span class="tag">Redis</span>
+                            <span class="tag">Cache</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                    </div>
+
+                    <div class="article-item" data-tags="Java,架构设计">
+                        <a href="article.html?id=5" class="article-title">分布式系统设计：CAP 定理与实际应用</a>
+                        <div class="article-meta">2026-03-28 | 阅读 156 | 分类: 架构设计</div>
+                        <p style="color: var(--text-dim); font-size: 14px; margin: 8px 0;">解释CAP定理的三个特性，结合实际案例分析如何在分布式系统中做出权衡。</p>
+                        <div class="article-tags">
+                            <span class="tag">分布式</span>
+                            <span class="tag">架构设计</span>
+                            <span class="tag">CAP</span>
+                        </div>
+                    </div>
+
+                    <div class="article-item" data-tags="Spring Boot,Java">
+                        <a href="article.html?id=6" class="article-title">Spring Security 实战：构建安全的认证授权系统</a>
+                        <div class="article-meta">2026-03-20 | 阅读 78 | 分类: Spring Boot</div>
+                        <p style="color: var(--text-dim); font-size: 14px; margin: 8px 0;">基于Spring Security实现JWT认证，支持OAuth2.0第三方登录。</p>
+                        <div class="article-tags">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Security</span>
+                            <span class="tag">JWT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="command-line">
+                        <span class="prompt">></span>
+                        <span class="command cursor"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 页脚 -->
+            <footer class="footer">
+                <div class="social-links">
+                    <a href="https://github.com/" target="_blank" class="social-link">GitHub</a>
+                    <a href="https://juejin.cn/" target="_blank" class="social-link">掘金</a>
+                    <a href="https://blog.csdn.net/" target="_blank" class="social-link">CSDN</a>
+                    <a href="mailto:your.email@example.com" class="social-link">Email</a>
+                </div>
+                <p class="copyright">© 2026 DevPortfolio. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/blog.js"></script>
+</body>
+</html>

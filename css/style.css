@@ -1,0 +1,475 @@
+/* ==================== 全局样式 ==================== */
+:root {
+    --bg-color: #0d0d0d;
+    --text-color: #e0e0e0;
+    --text-dim: #888888;
+    --accent-color: #ffffff;
+    --prompt-color: #6ee7b7;
+    --link-color: #60a5fa;
+    --link-hover: #93c5fd;
+    --border-color: #333333;
+    --code-bg: #1a1a1a;
+    --selection-bg: #60a5fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+/* ==================== 终端容器 ==================== */
+.terminal {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.terminal-header {
+    background: #1a1a1a;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.terminal-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-btn.close { background: #ff5f56; }
+.terminal-btn.minimize { background: #ffbd2e; }
+.terminal-btn.maximize { background: #27ca40; }
+
+.terminal-title {
+    flex: 1;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 13px;
+}
+
+.terminal-body {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    padding: 30px;
+    min-height: 500px;
+}
+
+/* ==================== 导航栏 ==================== */
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px dashed var(--border-color);
+    margin-bottom: 30px;
+}
+
+.prompt {
+    color: var(--prompt-color);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    color: var(--text-color);
+    position: relative;
+}
+
+.nav-link::before {
+    content: '//';
+    color: var(--text-dim);
+    margin-right: 5px;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+.nav-link.active {
+    color: var(--accent-color);
+}
+
+/* ==================== 终端内容区块 ==================== */
+.terminal-block {
+    margin-bottom: 25px;
+}
+
+.command-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.command-line .prompt {
+    font-size: 14px;
+}
+
+.command {
+    color: var(--accent-color);
+}
+
+.output {
+    padding-left: 20px;
+    color: var(--text-dim);
+}
+
+.output-content {
+    color: var(--text-color);
+}
+
+/* ==================== 打字机光标 ==================== */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background: var(--prompt-color);
+    animation: blink 1s infinite;
+    vertical-align: middle;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* ==================== Hero区域 ==================== */
+.hero {
+    margin: 40px 0;
+}
+
+.hero h1 {
+    font-size: 28px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.hero .description {
+    font-size: 16px;
+    color: var(--text-dim);
+    margin-bottom: 30px;
+}
+
+/* ==================== 技能标签 ==================== */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background: var(--code-bg);
+    border: 1px solid var(--border-color);
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+/* ==================== 文章列表 ==================== */
+.article-list {
+    margin-top: 15px;
+}
+
+.article-item {
+    padding: 15px;
+    border-left: 2px solid var(--border-color);
+    margin-bottom: 15px;
+    transition: border-color 0.2s;
+}
+
+.article-item:hover {
+    border-left-color: var(--prompt-color);
+}
+
+.article-title {
+    font-size: 16px;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.article-title:hover {
+    color: var(--link-color);
+}
+
+.article-meta {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 8px;
+}
+
+.article-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    background: transparent;
+    border: 1px solid var(--text-dim);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    color: var(--text-dim);
+}
+
+/* ==================== 技能墙 ==================== */
+.skill-category {
+    margin-bottom: 35px;
+}
+
+.skill-category h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.skill-category h3::before {
+    content: '### ';
+    color: var(--text-dim);
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-item {
+    background: var(--code-bg);
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.skill-name {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.skill-bar {
+    height: 4px;
+    background: var(--border-color);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--prompt-color), var(--link-color));
+    border-radius: 2px;
+    transition: width 1s ease;
+}
+
+.skill-level {
+    font-size: 11px;
+    color: var(--text-dim);
+    margin-top: 5px;
+}
+
+/* ==================== 博客页面 ==================== */
+.blog-header {
+    margin-bottom: 30px;
+}
+
+.blog-header h1 {
+    font-size: 24px;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-dim);
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: var(--prompt-color);
+    color: var(--prompt-color);
+}
+
+/* ==================== 文章详情 ==================== */
+.article-detail {
+    max-width: 800px;
+}
+
+.article-detail h1 {
+    font-size: 28px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.article-detail .article-meta {
+    margin-bottom: 25px;
+}
+
+.article-content {
+    line-height: 1.9;
+}
+
+.article-content h2 {
+    color: var(--accent-color);
+    margin: 30px 0 15px;
+    font-size: 20px;
+}
+
+.article-content h3 {
+    color: var(--text-color);
+    margin: 20px 0 10px;
+    font-size: 16px;
+}
+
+.article-content p {
+    margin-bottom: 15px;
+}
+
+.article-content ul,
+.article-content ol {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.article-content li {
+    margin-bottom: 8px;
+}
+
+.article-content code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: var(--prompt-color);
+}
+
+.article-content pre {
+    background: var(--code-bg);
+    padding: 20px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 20px 0;
+    border: 1px solid var(--border-color);
+}
+
+.article-content pre code {
+    background: none;
+    padding: 0;
+    color: var(--text-color);
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: var(--text-dim);
+    font-size: 14px;
+}
+
+.back-btn:hover {
+    color: var(--link-color);
+}
+
+.back-btn::before {
+    content: '< ';
+}
+
+/* ==================== 页脚 ==================== */
+.footer {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px dashed var(--border-color);
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.social-link {
+    color: var(--text-dim);
+    font-size: 14px;
+}
+
+.social-link:hover {
+    color: var(--accent-color);
+}
+
+.copyright {
+    font-size: 12px;
+    color: var(--text-dim);
+}
+
+/* ==================== 响应式 ==================== */
+@media (max-width: 768px) {
+    .terminal-body {
+        padding: 15px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .skill-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .terminal-title {
+        display: none;
+    }
+}

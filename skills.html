@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | 技术栈展示</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-btn close"></div>
+            <div class="terminal-btn minimize"></div>
+            <div class="terminal-btn maximize"></div>
+            <span class="terminal-title">root@portfolio:~/skills</span>
+        </div>
+        <div class="terminal-body">
+            <!-- 导航栏 -->
+            <nav class="nav">
+                <span class="prompt">root@portfolio:~$</span>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">home</a>
+                    <a href="blog.html" class="nav-link">blog</a>
+                    <a href="skills.html" class="nav-link active">skills</a>
+                </div>
+            </nav>
+
+            <!-- 技能墙主体 -->
+            <section class="hero">
+                <div class="terminal-block">
+                    <div class="command-line">
+                        <span class="prompt">></span>
+                        <span class="command">cat skills.json | jq</span>
+                    </div>
+                    <div class="output">
+                        <div class="output-content">
+                            <h1 style="font-size: 24px; margin-bottom: 10px;">技术栈</h1>
+                            <p style="color: var(--text-dim);">后端开发者的技能图谱</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 后端框架 -->
+                <div class="skill-category">
+                    <div class="command-line" style="margin-bottom: 15px;">
+                        <span class="prompt">></span>
+                        <span class="command">cat backend.txt</span>
+                    </div>
+                    <h3>后端框架 & 语言</h3>
+                    <div class="skill-grid" id="skill-backend">
+                        <div class="skill-item">
+                            <div class="skill-name">Java</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                            <div class="skill-level">熟练 - 5年+</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Spring Boot</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                            <div class="skill-level">熟练 - 4年+</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Spring Cloud</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+                            <div class="skill-level">熟悉 - 3年</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">MyBatis / MyBatis-Plus</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                            <div class="skill-level">熟练 - 4年</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JVM 调优</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 65%;"></div></div>
+                            <div class="skill-level">熟悉 - 2年</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 数据库 -->
+                <div class="skill-category">
+                    <div class="command-line" style="margin-bottom: 15px;">
+                        <span class="prompt">></span>
+                        <span class="command">cat database.txt</span>
+                    </div>
+                    <h3>数据库 & 缓存</h3>
+                    <div class="skill-grid" id="skill-database">
+                        <div class="skill-item">
+                            <div class="skill-name">MySQL</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                            <div class="skill-level">熟练 - 5年+</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Redis</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                            <div class="skill-level">熟练 - 3年</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Elasticsearch</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
+                            <div class="skill-level">熟悉 - 2年</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">MongoDB</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 60%;"></div></div>
+                            <div class="skill-level">了解</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 工具链 -->
+                <div class="skill-category">
+                    <div class="command-line" style="margin-bottom: 15px;">
+                        <span class="prompt">></span>
+                        <span class="command">cat tools.txt</span>
+                    </div>
+                    <h3>工具 & DevOps</h3>
+                    <div class="skill-grid" id="skill-tools">
+                        <div class="skill-item">
+                            <div class="skill-name">Git</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                            <div class="skill-level">熟练</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Docker</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                            <div class="skill-level">熟练 - 3年</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Maven / Gradle</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                            <div class="skill-level">熟练</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Linux</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 78%;"></div></div>
+                            <div class="skill-level">熟练 - 日常使用</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Nginx</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
+                            <div class="skill-level">熟悉</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Jenkins / CI/CD</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 65%;"></div></div>
+                            <div class="skill-level">熟悉</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 其他 -->
+                <div class="skill-category">
+                    <div class="command-line" style="margin-bottom: 15px;">
+                        <span class="prompt">></span>
+                        <span class="command">cat others.txt</span>
+                    </div>
+                    <h3>其他技能</h3>
+                    <div class="skill-grid" id="skill-others">
+                        <div class="skill-item">
+                            <div class="skill-name">微服务架构</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 78%;"></div></div>
+                            <div class="skill-level">熟悉</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">消息队列 (Kafka/RocketMQ)</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 72%;"></div></div>
+                            <div class="skill-level">熟悉</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">设计模式</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                            <div class="skill-level">熟练</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">RESTful API 设计</div>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                            <div class="skill-level">熟练</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="command-line">
+                        <span class="prompt">></span>
+                        <span class="command cursor"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 页脚 -->
+            <footer class="footer">
+                <div class="social-links">
+                    <a href="https://github.com/" target="_blank" class="social-link">GitHub</a>
+                    <a href="https://juejin.cn/" target="_blank" class="social-link">掘金</a>
+                    <a href="https://blog.csdn.net/" target="_blank" class="social-link">CSDN</a>
+                    <a href="mailto:your.email@example.com" class="social-link">Email</a>
+                </div>
+                <p class="copyright">© 2026 DevPortfolio. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/skills.js"></script>
+</body>
+</html>

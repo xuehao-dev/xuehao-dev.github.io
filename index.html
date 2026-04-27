@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPortfolio | 后端开发者的技术空间</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="terminal-btn close"></div>
+            <div class="terminal-btn minimize"></div>
+            <div class="terminal-btn maximize"></div>
+            <span class="terminal-title">root@portfolio:~</span>
+        </div>
+        <div class="terminal-body">
+            <!-- 导航栏 -->
+            <nav class="nav">
+                <span class="prompt">root@portfolio:~$</span>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">home</a>
+                    <a href="blog.html" class="nav-link">blog</a>
+                    <a href="skills.html" class="nav-link">skills</a>
+                </div>
+            </nav>
+
+            <!-- Hero区域 -->
+            <section class="hero">
+                <div class="terminal-block">
+                    <div class="command-line">
+                        <span class="prompt">></span>
+                        <span class="command">whoami</span>
+                    </div>
+                    <div class="output">
+                        <div class="output-content">
+                            <h1 id="typed-name">Your Name</h1>
+                            <p class="description">后端开发工程师 | Java Developer | 热爱技术，专注代码</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="command-line">
+                        <span class="prompt">></span>
+                        <span class="command">cat skills.txt</span>
+                    </div>
+                    <div class="output">
+                        <div class="output-content">
+                            <p>技术栈 & 专长：</p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Spring Boot</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">Redis</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="command-line">
+                        <span class="prompt">></span>
+                        <span class="command">ls -la ./blog</span>
+                    </div>
+                    <div class="output">
+                        <div class="output-content">
+                            <p>最新文章：</p>
+                            <div class="article-list" id="recent-articles">
+                                <div class="article-item">
+                                    <a href="article.html?id=1" class="article-title">Spring Boot 实战：如何设计优雅的参数校验</a>
+                                    <div class="article-meta">2026-04-20 | 阅读 126</div>
+                                    <div class="article-tags">
+                                        <span class="tag">Java</span>
+                                        <span class="tag">Spring Boot</span>
+                                    </div>
+                                </div>
+                                <div class="article-item">
+                                    <a href="article.html?id=2" class="article-title">MySQL索引优化：从原理到实践</a>
+                                    <div class="article-meta">2026-04-15 | 阅读 89</div>
+                                    <div class="article-tags">
+                                        <span class="tag">MySQL</span>
+                                        <span class="tag">Performance</span>
+                                    </div>
+                                </div>
+                                <div class="article-item">
+                                    <a href="article.html?id=3" class="article-title">Docker Compose 编排技巧：构建开发环境</a>
+                                    <div class="article-meta">2026-04-10 | 阅读 67</div>
+                                    <div class="article-tags">
+                                        <span class="tag">Docker</span>
+                                        <span class="tag">DevOps</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p style="margin-top: 15px;"><a href="blog.html">查看更多文章 →</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="command-line">
+                        <span class="prompt">></span>
+                        <span class="command">cat about.txt</span>
+                    </div>
+                    <div class="output">
+                        <div class="output-content">
+                            <p>关于我：</p>
+                            <p style="color: var(--text-dim); margin-top: 8px;">
+                                5年+后端开发经验，专注于企业级应用架构设计。<br>
+                                热衷于开源贡献，热爱解决复杂技术问题。<br>
+                                如果你有好的项目或想法，欢迎交流！
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="terminal-block">
+                    <div class="command-line">
+                        <span class="prompt">></span>
+                        <span class="command cursor"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 页脚 -->
+            <footer class="footer">
+                <div class="social-links">
+                    <a href="https://github.com/" target="_blank" class="social-link">GitHub</a>
+                    <a href="https://juejin.cn/" target="_blank" class="social-link">掘金</a>
+                    <a href="https://blog.csdn.net/" target="_blank" class="social-link">CSDN</a>
+                    <a href="mailto:your.email@example.com" class="social-link">Email</a>
+                </div>
+                <p class="copyright">© 2026 DevPortfolio. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
